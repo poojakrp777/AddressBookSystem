@@ -9,6 +9,7 @@ namespace AddressBookSystem
     internal class AddressBook
     {
         List<Contact> contacts = new List<Contact>();
+        //UC2-Add contact
         public void addContact(string firstName, string lastName, string email, string phoneNumber, string address, string zip, string city, string state)
         {
             contacts.Add(new Contact()
@@ -24,6 +25,7 @@ namespace AddressBookSystem
             });
             Console.WriteLine($"Contact of {firstName} {lastName} has been added");
         }
+        //UC3-Edit contact
         public void Edit(string name)
         {
             Contact editContact = null;
@@ -54,6 +56,20 @@ namespace AddressBookSystem
 
             contacts.Add(editContact);
             Console.WriteLine($"Contact of {name} has been edited");
+        }
+        //UC4-Delete contact
+        public void Remove(string name)
+        {
+            Contact RemoveContact = null;
+            foreach (var contact in contacts)
+            {
+                if (contact.firstName.Contains(name))
+                {
+                    RemoveContact = contact;
+                }
+            }
+            contacts.Remove(RemoveContact);
+            Console.WriteLine($"Contact of {name} has been deleted");
         }
     }
 }

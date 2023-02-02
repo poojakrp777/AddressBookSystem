@@ -37,11 +37,16 @@ namespace AddressBookSystem
             Console.WriteLine("Enter state");
             string state = Console.ReadLine();
 
+            //UC2-Add contact
             addressBook.addContact(firstName, lastName, email, phoneNumber, address, zip, city, state);
-
+            //UC3-Edit contact
             Console.WriteLine("\nIf you want to edit contact plz enter firstName");
             string name = Console.ReadLine();
             addressBook.Edit(name);
+            //UC4-Delete contact
+            Console.WriteLine("\nIf you want to delete contact plz enter firstname");
+            string firstname = Console.ReadLine();
+            addressBook.Remove(firstname);
             Console.ReadLine();
         }
     }
