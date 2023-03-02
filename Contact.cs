@@ -18,9 +18,9 @@ namespace AddressBookSystem
 
         public string state { get; set; }
 
-        public string zip { get; set; }
+        public int zip { get; set; }
 
-        public string phoneNo { get; set; }
+        public long phoneNo { get; set; }
 
         public string email { get; set; }
     }

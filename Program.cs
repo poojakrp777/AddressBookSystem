@@ -23,13 +23,13 @@ namespace AddressBookSystem
             string email = Console.ReadLine();
 
             Console.WriteLine("Enter phoneNumber");
-            string phoneNumber = Console.ReadLine();
+            long phoneNumber = Convert.ToInt64(Console.ReadLine());
 
             Console.WriteLine("Enter address");
             string address = Console.ReadLine();
 
             Console.WriteLine("Enter zip");
-            string zip = Console.ReadLine();
+            int zip = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter city");
             string city = Console.ReadLine();
@@ -37,8 +37,9 @@ namespace AddressBookSystem
             Console.WriteLine("Enter state");
             string state = Console.ReadLine();
 
+
             //UC2-Add contact
-            addressBook.addContact(firstName, lastName, email, phoneNumber, address, zip, city, state);
+            addressBook.AddContact(firstName, lastName, email, phoneNumber, address, zip, city, state);
             //UC3-Edit contact
             Console.WriteLine("\nIf you want to edit contact plz enter firstName");
             string name = Console.ReadLine();
